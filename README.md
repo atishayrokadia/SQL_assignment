@@ -35,11 +35,11 @@ This table contains information about **transactions**:
 
 ### Enquiries Data
 
-The script includes **INSERT statements** for adding 20 entries into the `enquiries` table, representing user enquiry records.
+The script includes **INSERT statements** for adding entries into the `enquiries` table, representing user enquiry records.
 
 ### Transactions Data
 
-The script includes **INSERT statements** for adding 10 entries into the `txns` table, representing user transaction records.
+The script includes **INSERT statements** for adding entries into the `txns` table, representing user transaction records.
 
 ## Queries
 
