@@ -315,6 +315,8 @@ INSERT INTO txns VALUES ('t98', 'u5', '2025-01-17', 900);
 INSERT INTO txns VALUES ('t99', 'u23', '2025-03-03', 200);
 INSERT INTO txns VALUES ('t100', 'u32', '2025-02-25', 800);
 
+
+------- Qury Starts from Here
 WITH cte AS (
     SELECT user_id, date,
         COUNT(*) AS c_eq,
