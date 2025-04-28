@@ -55,7 +55,7 @@ This query aggregates and counts the number of **enquiries** and **transactions*
 
 ### 2. Enquiry Conversion Mapping (`row_number` query)
 
-This query identifies the **first transaction** linked to each enquiry within a **30-day window**. It ensures that only the **first transaction** for each enquiry is counted, based on the transaction date and the order of transaction IDs.
+This task tracks the conversion of user enquiries into transactions. A user expresses interest by submitting an enquiry form, and an enquiry is considered "converted" if the user completes a transaction within 30 days of submitting the form. Each transaction is linked to at most one enquiry — specifically, the first eligible enquiry made within the preceding 30 days. However, a single enquiry can be associated with multiple transactions. The goal is to accurately measure the conversion performance of enquiries over time.
 
 #### Query Steps:
 - Joins the `enquiries` and `txns` tables on the `user_id`.
