@@ -60,7 +60,8 @@ This task tracks the conversion of user enquiries into transactions. A user expr
 #### Query Steps:
 - Joins the `enquiries` and `txns` tables on the `user_id`.
 - Filters for transactions that occurred within **30 days** of an enquiry.
-- Uses `ROW_NUMBER()` to assign a rank to each transaction for an enquiry, ordering by the transaction date in descending order.
+- Uses `ROW_NUMBER()` to assign a rank to each `enquiry_id` based on the enquiry date, in cases where multiple enquiries are linked to a single transaction within 
+  the last 30 days. Only the most recent (latest) enquiry within that 30-day window is considered.
 - Groups the results by `enquiry_id` and `e_date` and only selects those where `rn = 1` (first transaction).
 - Aggregates the result into an array of transaction IDs (`txn_id_array`) associated with each enquiry.
 
