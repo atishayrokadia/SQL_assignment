@@ -90,7 +90,7 @@ The second query provides a table with the following columns:
 
 ## Setup Instructions
 
-1. **Install ClickHouse** if you don't already have it. Follow the instructions on the [ClickHouse website](https://clickhouse.tech/docs/en/getting-started/) for installation.
+1. **Use [ClickHouse](https://fiddle.clickhouse.com/)** website to run the code.
 
 2. **Create Tables**: Execute the `CREATE TABLE` statements in your ClickHouse database to set up the `enquiries` and `txns` tables.
 
