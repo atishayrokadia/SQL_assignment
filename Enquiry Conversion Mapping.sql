@@ -317,8 +317,9 @@ INSERT INTO txns VALUES ('t100', 'u32', '2025-02-25', 800);
 
 
 
-select enquiry_id,rn,
-    e_date,groupArray(txn_id) as txn_id_array from (
+with cte as(
+select enquiry_id,
+    e_date,user_id,rn,groupArray(txn_id) as txn_id_array from (
 SELECT 
         e.enquiry_id, 
         e.date AS e_date,
@@ -331,5 +332,8 @@ SELECT
         AND t.date > e.date 
         AND t.date < e.date + INTERVAL 30 DAY
  )   
-  group by enquiry_id,e_date,rn
-    having rn=1;
+  group by enquiry_id,e_date,user_id,rn
+    having rn=1
+  )
+select enquiry_id,e_date,user_id,txn_id_array
+from cte;
