@@ -84,8 +84,8 @@ The second query provides a table with the following columns:
 | Column       | Description                                            |
 |--------------|--------------------------------------------------------|
 | `enquiry_id` | Unique identifier for the enquiry                      |
-| `rn`         | Rank number for transaction (only first transaction is included) |
 | `e_date`     | Date of the enquiry                                    |
+| `user_id`    | Unique identifier for the user                         |
 | `txn_id_array` | Array of transaction IDs linked to the enquiry        |
 
 ## Setup Instructions
