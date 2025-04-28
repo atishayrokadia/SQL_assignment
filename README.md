@@ -43,7 +43,7 @@ The script includes **INSERT statements** for adding entries into the `txns` tab
 
 ## Queries
 
-### 1. Enquiry and Transaction Counts (`cte` query)
+### 1. Enquiry and Transaction Counts
 
 This query aggregates and counts the number of **enquiries** and **transactions** for each `user_id` and `date`. It uses a **Common Table Expression (CTE)** to combine both the `enquiries` and `txns` data and then groups them by `user_id` and `date`.
 
@@ -53,7 +53,7 @@ This query aggregates and counts the number of **enquiries** and **transactions*
 - **Combines** the counts using a `UNION ALL` approach.
 - **Groups** the results by `user_id` and `date` and then **orders** them by `user_id` and `date`.
 
-### 2. Enquiry Conversion Mapping (`row_number` query)
+### 2. Enquiry Conversion Mapping 
 
 This task tracks the conversion of user enquiries into transactions. A user expresses interest by submitting an enquiry form, and an enquiry is considered "converted" if the user completes a transaction within 30 days of submitting the form. Each transaction is linked to at most one enquiry — specifically, the first eligible enquiry made within the preceding 30 days. However, a single enquiry can be associated with multiple transactions. The goal is to accurately measure the conversion performance of enquiries over time.
 
@@ -66,7 +66,7 @@ This task tracks the conversion of user enquiries into transactions. A user expr
 
 ## Results
 
-### 1. Aggregate Enquiries and Transactions Count
+### 1. Enquiry and Transaction Counts
 
 The first query provides a table with the following columns:
 
@@ -77,7 +77,7 @@ The first query provides a table with the following columns:
 | `c_eq`    | The count of enquiries for the user and date |
 | `c_tx`    | The count of transactions for the user and date |
 
-### 2. First Transaction per Enquiry
+### 2. Enquiry Conversion Mapping
 
 The second query provides a table with the following columns:
 
@@ -96,8 +96,8 @@ The second query provides a table with the following columns:
 
 3. **Insert Data**: Run the `INSERT INTO` queries to populate the tables with sample data.
 
-4. **Execute Queries**: Run the provided queries to analyze the data and generate the desired results.
+4. **Execute Queries**: Run the provided queries to analyse the data and generate the desired results.
 
 ## Conclusion
 
-This script provides a comprehensive solution for analyzing **enquiries** and **transactions** data. It helps identify **first transactions** linked to enquiries within a 30-day window and provides aggregate counts of both enquiries and transactions, making it useful for customer behavior analysis and revenue impact forecasting.
+This script provides a comprehensive solution for analysing **enquiries** and **transactions** data. It helps identify **first transactions** linked to enquiries within a 30-day window and provides aggregate counts of both enquiries and transactions, making it useful for customer behaviour analysis and revenue impact forecasting.
