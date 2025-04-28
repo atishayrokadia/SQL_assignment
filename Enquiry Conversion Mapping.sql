@@ -325,7 +325,7 @@ SELECT
         e.date AS e_date,
         e.user_id,
         t.txn_id,
-        row_number() OVER(PARTITION BY e.enquiry_id ORDER BY t.txn_id DESC) AS rn
+        row_number() OVER(PARTITION BY t.txn_id ORDER BY e_date DESC) AS rn
     FROM enquiries e
     LEFT JOIN txns t
         ON e.user_id = t.user_id 
