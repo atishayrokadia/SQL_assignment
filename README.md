@@ -43,7 +43,7 @@ The script includes **INSERT statements** for adding entries into the `txns` tab
 
 ## Queries
 
-### 1. Aggregate Count of Enquiries and Transactions (`cte` query)
+### 1. Enquiry and Transaction Counts (`cte` query)
 
 This query aggregates and counts the number of **enquiries** and **transactions** for each `user_id` and `date`. It uses a **Common Table Expression (CTE)** to combine both the `enquiries` and `txns` data and then groups them by `user_id` and `date`.
 
@@ -53,7 +53,7 @@ This query aggregates and counts the number of **enquiries** and **transactions*
 - **Combines** the counts using a `UNION ALL` approach.
 - **Groups** the results by `user_id` and `date` and then **orders** them by `user_id` and `date`.
 
-### 2. Identifying First Transaction for Each Enquiry (`row_number` query)
+### 2. Enquiry Conversion Mapping (`row_number` query)
 
 This query identifies the **first transaction** linked to each enquiry within a **30-day window**. It ensures that only the **first transaction** for each enquiry is counted, based on the transaction date and the order of transaction IDs.
 
