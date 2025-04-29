@@ -100,4 +100,4 @@ The second query provides a table with the following columns:
 
 ## Conclusion
 
-This script provides a comprehensive solution for analysing **enquiries** and **transactions** data. It helps identify **first transactions** linked to enquiries within a 30-day window and provides aggregate counts of both enquiries and transactions, making it useful for customer behaviour analysis and revenue impact forecasting.
+This script provides a comprehensive solution for analysing **enquiries** and **transactions** data. It helps identify **transactions** linked to enquiries within a 30-day window and provides aggregate counts of both enquiries and transactions, making it useful for customer behaviour analysis and revenue impact forecasting.
