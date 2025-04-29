@@ -5,7 +5,7 @@
 This project contains SQL scripts for analyzing and processing data related to **enquiries** and **transactions** within a database. It uses a **ClickHouse** database with two tables: `enquiries` and `txns`. The goal is to:
 
 1. Integrate the data from both tables, linking **enquiries** and **transactions** based on `user_id` and `date`.
-2. Identify **first transactions** for each enquiry within a **30-day window**.
+2. Identify **transactions** for each enquiry within a **30-day window**.
 3. Provide aggregate results such as the **count of enquiries** and **transactions** by `user_id` and `date`.
 
 ## Tables
